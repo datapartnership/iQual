@@ -1,0 +1,1074 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Model - Bootstrap &#8212; iQual</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://worldbank.github.io/iQual/notebooks/advanced/Model-Bootstrap.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interpretability" href="../interpretability/README.html" />
+    <link rel="prev" title="Model - Multiple Annotations" href="Model-MultipleAnnotations.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">iQual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    iQual
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basic/README.html">
+   Basic Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basic/Model-Sklearn.html">
+     Vectorize with scikit-learn
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basic/Model-SpaCy.html">
+     Vectorize with SpaCy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basic/Model-SentenceTransformers.html">
+     Vectorize with Sentence Transformers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basic/Model-SavedDictionary.html">
+     Vectorize with a Saved Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="README.html">
+   Advanced Usage
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Model-MultipleVectorizers.html">
+     Multiple Vectorizers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Model-MultipleClassifiers.html">
+     Multiple Classifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Model-MultipleAnnotations.html">
+     Multiple Annotations
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Bootstrap
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../interpretability/README.html">
+   Interpretability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interpretability/InterpretabilityTest.html">
+     Interpretability Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interpretability/RegressionCoefficientTest.html">
+     Regression Coefficients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interpretability/Interpretability_Increasing_N_h.html">
+     Interpretability Increases with Human Annotations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../efficiency/README.html">
+   Efficiency
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../efficiency/EfficiencyTest.html">
+     Efficiency Test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bias/README.html">
+   Bias
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bias/BiasTest.html">
+     Bias Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/worldbank/iQual/main?urlpath=tree/docs/notebooks/advanced/Model-Bootstrap.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/worldbank/iQual"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/notebooks/advanced/Model-Bootstrap.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-annotated-human-coded-and-unannotated-datasets">
+   Load
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     annotated
+    </span>
+    <span class="pre">
+     (human-coded)
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     unannotated
+    </span>
+   </code>
+   datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-training-data">
+   Configure training data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-a-hyperparameter-grid-for-cross-validation-fitting">
+   Configure a Hyperparameter Grid for cross-validation + fitting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-training">
+   Model training:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selected-model-parameters">
+   Selected model parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-parameter-selections-for-each-annotation-across">
+   Plot
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     parameter
+    </span>
+    <span class="pre">
+     selections
+    </span>
+   </code>
+   for each annotation across:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-validation-set-performance">
+   Plot
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Validation
+    </span>
+    <span class="pre">
+     set
+    </span>
+    <span class="pre">
+     performance
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Model - Bootstrap</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-annotated-human-coded-and-unannotated-datasets">
+   Load
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     annotated
+    </span>
+    <span class="pre">
+     (human-coded)
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     unannotated
+    </span>
+   </code>
+   datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-training-data">
+   Configure training data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-a-hyperparameter-grid-for-cross-validation-fitting">
+   Configure a Hyperparameter Grid for cross-validation + fitting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-training">
+   Model training:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selected-model-parameters">
+   Selected model parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-parameter-selections-for-each-annotation-across">
+   Plot
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     parameter
+    </span>
+    <span class="pre">
+     selections
+    </span>
+   </code>
+   for each annotation across:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-validation-set-performance">
+   Plot
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Validation
+    </span>
+    <span class="pre">
+     set
+    </span>
+    <span class="pre">
+     performance
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="model-bootstrap">
+<h1>Model - Bootstrap<a class="headerlink" href="#model-bootstrap" title="Permalink to this headline">#</a></h1>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">iqual</span> <span class="kn">import</span> <span class="n">iqualnlp</span><span class="p">,</span> <span class="n">evaluation</span><span class="p">,</span> <span class="n">crossval</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-annotated-human-coded-and-unannotated-datasets">
+<h2>Load <code class="docutils literal notranslate"><span class="pre">annotated</span> <span class="pre">(human-coded)</span></code> and <code class="docutils literal notranslate"><span class="pre">unannotated</span></code> datasets<a class="headerlink" href="#load-annotated-human-coded-and-unannotated-datasets" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dir</span>         <span class="o">=</span> <span class="s2">&quot;../../data&quot;</span>
+<span class="n">human_coded_df</span>   <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span><span class="s2">&quot;annotated.csv&quot;</span><span class="p">))</span>
+<span class="n">uncoded_df</span>       <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span><span class="s2">&quot;unannotated.csv&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="configure-training-data">
+<h2>Configure training data<a class="headerlink" href="#configure-training-data" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Select Question and Answer Columns</span>
+<span class="n">question_col</span> <span class="o">=</span> <span class="s1">&#39;Q_en&#39;</span>
+<span class="n">answer_col</span>   <span class="o">=</span> <span class="s1">&#39;A_en&#39;</span>
+
+<span class="c1">### Select a code</span>
+<span class="n">code_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;religious&#39;</span><span class="p">,</span> <span class="s1">&#39;secular&#39;</span><span class="p">,</span> <span class="s1">&#39;no_ambition&#39;</span><span class="p">,</span> <span class="s1">&#39;vague_job&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;job_secular&#39;</span><span class="p">,</span><span class="s1">&#39;vocational_training&#39;</span><span class="p">,</span> <span class="s1">&#39;entrepreneur&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;education_low&#39;</span><span class="p">,</span><span class="s1">&#39;education_neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;education_high&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;education_religious&#39;</span><span class="p">,</span> <span class="s1">&#39;marriage&#39;</span><span class="p">,</span> <span class="s1">&#39;migration&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;vague_non_specific&#39;</span><span class="p">,</span> <span class="s1">&#39;reliance_on_god&#39;</span><span class="p">,</span> <span class="s1">&#39;ability_high&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;ability_low&#39;</span><span class="p">,</span> <span class="s1">&#39;budget_high&#39;</span><span class="p">,</span> <span class="s1">&#39;budget_low&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;awareness_information_high&#39;</span><span class="p">,</span><span class="s1">&#39;awareness_information_low&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;camp_regulations&#39;</span><span class="p">,</span> <span class="s1">&#39;covid_impacts&#39;</span><span class="p">,</span> <span class="s1">&#39;public_assistance&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;worries_anxieties&#39;</span><span class="p">,</span>
+                 <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scoring Dict for evaluation</span>
+<span class="n">scoring_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;f1&#39;</span><span class="p">:</span><span class="n">evaluation</span><span class="o">.</span><span class="n">get_scorer</span><span class="p">(</span><span class="s1">&#39;f1&#39;</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="configure-a-hyperparameter-grid-for-cross-validation-fitting">
+<h2>Configure a Hyperparameter Grid for cross-validation + fitting<a class="headerlink" href="#configure-a-hyperparameter-grid-for-cross-validation-fitting" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Paths for precomputed vectors created using `sentence-transformers`</span>
+<span class="n">dict_dir</span>          <span class="o">=</span> <span class="s2">&quot;../../dictionaries&quot;</span>
+
+<span class="c1">### Sentence-Transformers precomputed vectors</span>
+<span class="n">sbert_models</span>      <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;all-mpnet-base-v2&quot;</span><span class="p">,</span><span class="s1">&#39;all-roberta-large-v1&#39;</span><span class="p">,</span><span class="s2">&quot;distiluse-base-multilingual-cased-v2&quot;</span><span class="p">]</span>
+<span class="n">sbert_model_paths</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dict_dir</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="s1">&#39;.pkl&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">sbert_models</span><span class="p">]</span>
+
+<span class="c1">### Spacy precomputed vectors</span>
+<span class="n">spacy_models</span>      <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">]</span>
+<span class="n">spacy_model_paths</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dict_dir</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="s1">&#39;.pkl&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">spacy_models</span><span class="p">]</span>
+
+<span class="c1">### All precomputed vectors</span>
+<span class="n">model_paths</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">sbert_model_paths</span><span class="p">,</span><span class="o">*</span><span class="n">spacy_model_paths</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PRETRAINED_QA_PARAMS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Input&quot;</span><span class="p">:{</span><span class="s2">&quot;question&quot;</span><span class="p">:{</span><span class="s2">&quot;vectorizer&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span><span class="n">model_paths</span><span class="p">,</span><span class="s2">&quot;env&quot;</span><span class="p">:[</span><span class="s1">&#39;saved-dictionary&#39;</span><span class="p">]}},</span><span class="s2">&quot;answer&quot;</span><span class="p">:{</span><span class="s2">&quot;vectorizer&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span><span class="n">model_paths</span><span class="p">,</span><span class="s2">&quot;env&quot;</span><span class="p">:[</span><span class="s1">&#39;saved-dictionary&#39;</span><span class="p">]}}},</span>
+<span class="p">}</span>
+<span class="n">PRETRAINED_A_PARAMS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Input&quot;</span><span class="p">:{</span><span class="s2">&quot;question&quot;</span><span class="p">:[</span><span class="s2">&quot;drop&quot;</span><span class="p">],</span><span class="s2">&quot;answer&quot;</span><span class="p">:{</span><span class="s2">&quot;vectorizer&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span><span class="n">model_paths</span><span class="p">,</span><span class="s2">&quot;env&quot;</span><span class="p">:[</span><span class="s1">&#39;saved-dictionary&#39;</span><span class="p">]}}},</span>
+<span class="p">}</span>
+<span class="n">SKLEARN_QA_PARAMS</span>  <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Input&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;question&quot;</span><span class="p">:{</span><span class="s2">&quot;vectorizer&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s1">&#39;TfidfVectorizer&#39;</span><span class="p">,</span><span class="s1">&#39;CountVectorizer&#39;</span><span class="p">],</span><span class="s2">&quot;env&quot;</span><span class="p">:[</span><span class="s1">&#39;scikit-learn&#39;</span><span class="p">],</span><span class="s1">&#39;max_features&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">6500</span><span class="p">,</span><span class="mi">1000</span><span class="p">)}},</span>
+        <span class="s2">&quot;answer&quot;</span><span class="p">:{</span><span class="s2">&quot;vectorizer&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s1">&#39;TfidfVectorizer&#39;</span><span class="p">,</span><span class="s1">&#39;CountVectorizer&#39;</span><span class="p">],</span><span class="s2">&quot;env&quot;</span><span class="p">:[</span><span class="s1">&#39;scikit-learn&#39;</span><span class="p">],</span><span class="s1">&#39;max_features&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span><span class="mi">8500</span><span class="p">,</span><span class="mi">500</span><span class="p">)}}</span>
+    <span class="p">},</span>    
+<span class="p">}</span>
+<span class="n">SKLEARN_A_PARAMS</span>  <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Input&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;question&quot;</span><span class="p">:[</span><span class="s2">&quot;drop&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;answer&quot;</span><span class="p">:{</span><span class="s2">&quot;vectorizer&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s1">&#39;TfidfVectorizer&#39;</span><span class="p">,</span><span class="s1">&#39;CountVectorizer&#39;</span><span class="p">],</span><span class="s2">&quot;env&quot;</span><span class="p">:[</span><span class="s1">&#39;scikit-learn&#39;</span><span class="p">],</span><span class="s1">&#39;max_features&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span><span class="mi">8500</span><span class="p">,</span><span class="mi">1000</span><span class="p">)}}</span>
+    <span class="p">},</span>    
+<span class="p">}</span>
+<span class="n">LOGISTIC_PARAMS</span>      <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Classifier&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s2">&quot;LogisticRegression&quot;</span><span class="p">],</span><span class="s2">&quot;C&quot;</span><span class="p">:[</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span><span class="s1">&#39;penalty&#39;</span><span class="p">:[</span><span class="s1">&#39;l1&#39;</span><span class="p">,</span><span class="s1">&#39;l2&#39;</span><span class="p">],</span><span class="s1">&#39;solver&#39;</span><span class="p">:[</span><span class="s1">&#39;saga&#39;</span><span class="p">]}}</span>
+<span class="n">RANDOM_FOREST_PARAMS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Classifier&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s2">&quot;RandomForestClassifier&quot;</span><span class="p">],</span><span class="s2">&quot;n_estimators&quot;</span><span class="p">:[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">400</span><span class="p">],</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">]}}</span>
+<span class="n">SGD_PARAMS</span>           <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Classifier&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s2">&quot;SGDClassifier&quot;</span><span class="p">],</span><span class="s2">&quot;loss&quot;</span><span class="p">:[</span><span class="s2">&quot;modified_huber&quot;</span><span class="p">],</span><span class="s2">&quot;penalty&quot;</span><span class="p">:[</span><span class="s2">&quot;l2&quot;</span><span class="p">,</span><span class="s2">&quot;l1&quot;</span><span class="p">]}}</span>
+<span class="n">SVC_PARAMS</span>           <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Classifier&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s2">&quot;SVC&quot;</span><span class="p">],</span><span class="s2">&quot;C&quot;</span><span class="p">:[</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span><span class="s1">&#39;kernel&#39;</span><span class="p">:[</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span><span class="s1">&#39;rbf&#39;</span><span class="p">]}}</span>
+<span class="n">KNN_PARAMS</span>           <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Classifier&quot;</span><span class="p">:{</span><span class="s2">&quot;model&quot;</span><span class="p">:[</span><span class="s2">&quot;KNeighborsClassifier&quot;</span><span class="p">],</span><span class="s2">&quot;n_neighbors&quot;</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">],</span><span class="s1">&#39;weights&#39;</span><span class="p">:[</span><span class="s1">&#39;uniform&#39;</span><span class="p">],}}</span>
+
+<span class="n">VECTORIZATION_PARAMS</span>   <span class="o">=</span> <span class="p">[</span><span class="n">PRETRAINED_QA_PARAMS</span><span class="p">,</span><span class="n">PRETRAINED_A_PARAMS</span><span class="p">,</span><span class="n">SKLEARN_QA_PARAMS</span><span class="p">,</span><span class="n">SKLEARN_A_PARAMS</span><span class="p">]</span>
+<span class="n">CLASSIFIER_PARAMS</span>      <span class="o">=</span> <span class="p">[</span><span class="n">LOGISTIC_PARAMS</span><span class="p">,</span><span class="n">RANDOM_FOREST_PARAMS</span><span class="p">,</span><span class="n">SGD_PARAMS</span><span class="p">,</span><span class="n">SVC_PARAMS</span><span class="p">,</span><span class="n">KNN_PARAMS</span><span class="p">]</span>
+<span class="n">ALL_PARAM_COMBINATIONS</span> <span class="o">=</span> <span class="p">[{</span><span class="o">**</span><span class="n">vect_params</span><span class="p">,</span> <span class="o">**</span><span class="n">clf_params</span><span class="p">}</span> <span class="k">for</span> <span class="n">vect_params</span> <span class="ow">in</span> <span class="n">VECTORIZATION_PARAMS</span> <span class="k">for</span> <span class="n">clf_params</span> <span class="ow">in</span> <span class="n">CLASSIFIER_PARAMS</span><span class="p">]</span>
+
+<span class="n">CV_SEARCH_PARAMS</span> <span class="o">=</span> <span class="p">[</span><span class="n">crossval</span><span class="o">.</span><span class="n">convert_nested_params</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ALL_PARAM_COMBINATIONS</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of hyperparameter configurations: </span><span class="si">{</span><span class="n">crossval</span><span class="o">.</span><span class="n">count_hyperparameters</span><span class="p">(</span><span class="n">CV_SEARCH_PARAMS</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of hyperparameter configurations: 1014
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-training">
+<h2>Model training:<a class="headerlink" href="#model-training" title="Permalink to this headline">#</a></h2>
+<p>Cross-validate over hyperparameters and select the best model</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NUM_BOOTSTRAP_RUNS</span> <span class="o">=</span> <span class="mi">25</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bootstrap_dfs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">cv_dfs</span>        <span class="o">=</span> <span class="p">[]</span>
+<span class="n">param_dfs</span>     <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">bootstrap_run</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">NUM_BOOTSTRAP_RUNS</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    
+    
+    <span class="n">train_df</span><span class="p">,</span> <span class="n">test_df</span>   <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">human_coded_df</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+    
+    <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;split&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s1">&#39;train&#39;</span>
+    <span class="n">test_df</span><span class="p">[</span><span class="s1">&#39;split&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
+    <span class="n">uncoded_df</span><span class="p">[</span><span class="s1">&#39;split&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;unannotated&#39;</span>
+    
+    <span class="n">boot_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train_df</span><span class="p">,</span><span class="n">test_df</span><span class="p">,</span><span class="n">uncoded_df</span><span class="p">])</span>
+    <span class="n">boot_df</span><span class="p">[</span><span class="s1">&#39;bootstrap_run&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bootstrap_run</span>
+    
+    <span class="k">for</span> <span class="n">code_var</span> <span class="ow">in</span> <span class="n">code_variables</span><span class="p">:</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Bootstrap </span><span class="si">{</span><span class="n">bootstrap_run</span><span class="si">}</span><span class="s2"> | Annotation: </span><span class="si">{</span><span class="n">code_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="c1">## Create X and y</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">train_df</span><span class="p">[[</span><span class="n">question_col</span><span class="p">,</span><span class="n">answer_col</span><span class="p">]]</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">train_df</span><span class="p">[</span><span class="n">code_var</span><span class="p">]</span>
+
+        <span class="n">iqual_model</span> <span class="o">=</span> <span class="n">iqualnlp</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span>
+        <span class="n">iqual_model</span><span class="o">.</span><span class="n">add_text_features</span><span class="p">(</span><span class="n">question_col</span><span class="p">,</span><span class="n">answer_col</span><span class="p">)</span>
+        <span class="n">iqual_model</span><span class="o">.</span><span class="n">add_classifier</span><span class="p">()</span>
+        <span class="n">iqual_model</span><span class="o">.</span><span class="n">add_threshold</span><span class="p">()</span>
+        <span class="n">iqual_model</span><span class="o">.</span><span class="n">compile</span><span class="p">()</span>
+        
+        <span class="n">cv_dict</span> <span class="o">=</span> <span class="n">iqual_model</span><span class="o">.</span><span class="n">cross_validate_fit</span><span class="p">(</span>
+            <span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span>                                <span class="c1"># X: Pandas DataFrame of features, y: Pandas Series of labels</span>
+            <span class="n">search_parameters</span><span class="o">=</span><span class="n">CV_SEARCH_PARAMS</span><span class="p">,</span> <span class="c1"># search_parameters: Dictionary of parameters to use for cross-validation</span>
+            <span class="n">cv_method</span><span class="o">=</span><span class="s1">&#39;GridSearchCV&#39;</span><span class="p">,</span>     <span class="c1"># cv_method: Cross-validation method to use, options: GridSearchCV, RandomizedSearchCV</span>
+            <span class="c1"># n_iter=5,                           # n_iter: Only when cv_method=&#39;RandomizedSearchCV&#39;</span>
+            <span class="n">scoring</span><span class="o">=</span><span class="n">scoring_dict</span><span class="p">,</span>               <span class="c1"># scoring: Scoring metric to use for cross-validation    </span>
+            <span class="n">refit</span><span class="o">=</span><span class="s1">&#39;f1&#39;</span><span class="p">,</span>                         <span class="c1"># refit: Metric to use for refitting the model</span>
+            <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>                          <span class="c1"># n_jobs: Number of parallel threads to use  </span>
+            <span class="n">cv_splits</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>                        <span class="c1"># cv_splits: Number of cross-validation splits</span>
+        <span class="p">)</span>
+        
+        
+        <span class="c1">## Selected Best parameters</span>
+        <span class="n">selected_param_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">iqual_model</span><span class="o">.</span><span class="n">cv</span><span class="o">.</span><span class="n">get_best_params</span><span class="p">(),</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">selected_param_df</span><span class="p">[</span><span class="s1">&#39;annotation&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="n">code_var</span>
+        <span class="n">selected_param_df</span><span class="p">[</span><span class="s1">&#39;bootstrap_run&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bootstrap_run</span>        
+        <span class="n">param_dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">selected_param_df</span><span class="p">)</span>
+        
+        <span class="c1"># `NOTE`: Use `iqual_model.cv.get_cv_results()` to get more detailed cross-validation results.</span>
+        
+        <span class="c1">## Cross-Validation data</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">Average F1 score for </span><span class="si">{code_var}</span><span class="s2">: </span><span class="si">{score:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">code_var</span><span class="o">=</span><span class="n">code_var</span><span class="p">,</span><span class="n">score</span><span class="o">=</span><span class="n">cv_dict</span><span class="p">[</span><span class="s1">&#39;avg_test_score&#39;</span><span class="p">]),</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+        <span class="n">cv_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">cv_dict</span><span class="p">])</span>
+        <span class="n">cv_df</span><span class="p">[</span><span class="s1">&#39;annotation&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="n">code_var</span>
+        <span class="n">cv_df</span><span class="p">[</span><span class="s1">&#39;bootstrap_run&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bootstrap_run</span>
+        <span class="n">cv_dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cv_df</span><span class="p">)</span>
+
+        
+        <span class="c1"># Predict on both `test` (held-out human annotated data) and on (uncoded/machine data) using the dataframe:</span>
+        <span class="n">boot_df</span><span class="p">[</span><span class="n">code_var</span><span class="o">+</span><span class="s2">&quot;_pred&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">iqual_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">boot_df</span><span class="p">[[</span><span class="s1">&#39;Q_en&#39;</span><span class="p">,</span><span class="s1">&#39;A_en&#39;</span><span class="p">]])</span>        
+    
+    <span class="c1"># Append after each bootstrap run</span>
+    <span class="n">bootstrap_dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">boot_df</span><span class="p">)</span>
+
+<span class="n">param_data</span>     <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">param_dfs</span><span class="p">)</span>    
+<span class="n">bootstrap_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">bootstrap_dfs</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="selected-model-parameters">
+<h2>Selected model parameters<a class="headerlink" href="#selected-model-parameters" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">param_data</span>     <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">param_dfs</span><span class="p">)</span>    
+
+<span class="c1"># Best Parameters</span>
+<span class="n">param_data</span> <span class="o">=</span> <span class="n">param_data</span><span class="p">[[</span><span class="s1">&#39;annotation&#39;</span><span class="p">,</span><span class="s1">&#39;bootstrap_run&#39;</span><span class="p">,</span><span class="s1">&#39;Input__question__vectorizer__model&#39;</span><span class="p">,</span><span class="s1">&#39;Input__answer__vectorizer__model&#39;</span><span class="p">,</span><span class="s1">&#39;Classifier__model&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Question: Drop | Keep</span>
+<span class="n">param_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">param_data</span><span class="p">[</span><span class="s1">&#39;Input__question__vectorizer__model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span><span class="s1">&#39;question&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">&#39;Answer only&#39;</span>
+<span class="n">param_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">param_data</span><span class="p">[</span><span class="s1">&#39;Input__question__vectorizer__model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">(),</span><span class="s1">&#39;question&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Question + Answer&#39;</span>
+
+<span class="c1"># Rename columns</span>
+<span class="n">param_data</span> <span class="o">=</span> <span class="n">param_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Input__answer__vectorizer__model&#39;</span><span class="p">:</span><span class="s1">&#39;vectorization&#39;</span><span class="p">,</span><span class="s1">&#39;Classifier__model&#39;</span><span class="p">:</span><span class="s1">&#39;classifier&#39;</span><span class="p">})</span>
+
+<span class="c1"># Replace Dictionary paths of precomputed pkl files </span>
+<span class="n">param_data</span><span class="p">[</span><span class="s1">&#39;vectorization&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">param_data</span><span class="p">[</span><span class="s1">&#39;vectorization&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.pkl&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">param_data</span> <span class="o">=</span> <span class="n">param_data</span><span class="p">[[</span><span class="s1">&#39;annotation&#39;</span><span class="p">,</span><span class="s1">&#39;bootstrap_run&#39;</span><span class="p">,</span><span class="s1">&#39;question&#39;</span><span class="p">,</span><span class="s1">&#39;vectorization&#39;</span><span class="p">,</span><span class="s1">&#39;classifier&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-parameter-selections-for-each-annotation-across">
+<h2>Plot <code class="docutils literal notranslate"><span class="pre">parameter</span> <span class="pre">selections</span></code> for each annotation across:<a class="headerlink" href="#plot-parameter-selections-for-each-annotation-across" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Question/ Question + Answer</p></li>
+<li><p>Vectorizer</p></li>
+<li><p>Classifier</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">question_options</span>      <span class="o">=</span> <span class="n">param_data</span><span class="p">[</span><span class="s1">&#39;question&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">vectorizer_options</span>    <span class="o">=</span> <span class="n">param_data</span><span class="p">[</span><span class="s1">&#39;vectorization&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">classifier_options</span>    <span class="o">=</span> <span class="n">param_data</span><span class="p">[</span><span class="s1">&#39;classifier&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">all_options</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">question_options</span><span class="p">,</span><span class="o">*</span><span class="n">vectorizer_options</span><span class="p">,</span><span class="o">*</span><span class="n">classifier_options</span><span class="p">]</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;#00425A&#39;</span><span class="p">,</span><span class="s1">&#39;#A4BE7B&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;#9C2C77&#39;</span><span class="p">,</span><span class="s1">&#39;#CD104D&#39;</span><span class="p">,</span><span class="s1">&#39;#E14D2A&#39;</span><span class="p">,</span><span class="s1">&#39;#FD841F&#39;</span><span class="p">,</span><span class="s1">&#39;#FFD384&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;#0C084C&#39;</span><span class="p">,</span><span class="s1">&#39;#096386&#39;</span><span class="p">,</span><span class="s1">&#39;#00B7A8&#39;</span><span class="p">,</span> <span class="s1">&#39;#544179&#39;</span><span class="p">,</span> <span class="s1">&#39;#BFEAF5&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">option</span><span class="p">:</span><span class="n">colors</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="k">for</span> <span class="n">o</span><span class="p">,</span> <span class="n">option</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_options</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">18</span><span class="p">))</span>
+
+<span class="c1"># Title</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Choices of text representation and classifier&quot;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">fontfamily</span><span class="o">=</span><span class="s1">&#39;Times New Roman&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">,)</span>
+
+<span class="c1"># Empty lists - handles/labels for adding common legend later.</span>
+<span class="n">handles</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">labels</span>  <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;question&#39;</span><span class="p">,</span> <span class="s1">&#39;vectorization&#39;</span><span class="p">,</span> <span class="s1">&#39;classifier&#39;</span><span class="p">])):</span>
+    <span class="n">param_df</span> <span class="o">=</span> <span class="n">param_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;annotation&#39;</span><span class="p">)[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">param_data</span><span class="o">.</span><span class="n">bootstrap_run</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">bottom</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">param_df</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+    
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">param_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">param_df</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">h</span>      <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">param_df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> 
+                         <span class="n">values</span><span class="p">,</span> 
+                         <span class="n">color</span><span class="o">=</span><span class="n">color_dict</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> 
+                         <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span><span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                         <span class="n">left</span><span class="o">=</span><span class="n">bottom</span>
+                        <span class="p">)</span>
+        
+        <span class="n">bottom</span> <span class="o">+=</span> <span class="n">values</span>
+        
+        <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+        <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>      
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">col</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(),</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;family&#39;</span><span class="p">:</span><span class="s1">&#39;Times New Roman&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;fontsize&#39;</span><span class="p">:</span><span class="mi">24</span><span class="p">,</span>
+                                            <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;#4e4e4e&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="mi">800</span>
+                                           <span class="p">},</span>
+                 <span class="n">pad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    
+    
+    <span class="c1"># Optional: Create a line at the boundary of each subplot</span>
+    <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">,</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span><span class="s1">&#39;left&#39;</span><span class="p">]:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span> 
+                
+    <span class="c1"># X-axis</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;light&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Y-axis</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="s1">&#39;#4e4e4e&#39;</span><span class="p">)</span>
+
+<span class="c1"># X-axis label</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.07</span><span class="p">,</span> <span class="s1">&#39;Selected&#39;</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span>
+                                         <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s2">&quot;#4e4e4e&quot;</span><span class="p">,</span>
+                                         <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">},)</span>
+
+<span class="c1"># Y-axis label</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span><span class="s1">&#39;Annotation&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span><span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span>
+                                                               <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s2">&quot;#4e4e4e&quot;</span><span class="p">,</span>
+                                                               <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">},</span>
+        <span class="p">)</span>
+
+<span class="c1"># Legend</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">,</span> 
+           <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelspacing</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
+           <span class="n">handlelength</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">handleheight</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+           <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;x-large&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.92</span><span class="p">,</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Model-Bootstrap_18_0.png" src="../../_images/Model-Bootstrap_18_0.png" />
+</div>
+</div>
+</section>
+<section id="plot-validation-set-performance">
+<h2>Plot <code class="docutils literal notranslate"><span class="pre">Validation</span> <span class="pre">set</span> <span class="pre">performance</span></code><a class="headerlink" href="#plot-validation-set-performance" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### F1 score using random predictions --&gt; sparsity of variable</span>
+<span class="n">random_f1_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">human_coded_df</span><span class="p">[</span><span class="n">code_variables</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+
+<span class="c1"># Title</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Validation set performance&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">fontfamily</span><span class="o">=</span><span class="s1">&#39;Times New Roman&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">,)</span>
+
+<span class="c1"># X-axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">cv_df</span><span class="p">[</span><span class="s1">&#39;annotation&#39;</span><span class="p">],</span>
+           <span class="n">x</span><span class="o">=</span><span class="n">cv_df</span><span class="p">[</span><span class="s1">&#39;mean_test_f1&#39;</span><span class="p">],</span>
+           <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+           <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation Set&#39;</span>
+           
+          <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">random_f1_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+           <span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">random_f1_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
+           <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+           <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Random&#39;</span>
+          <span class="p">)</span>
+
+<span class="c1"># Y-axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">cv_df</span><span class="p">[</span><span class="s1">&#39;annotation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">cv_df</span><span class="p">[</span><span class="s1">&#39;annotation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;light&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">)</span>
+
+<span class="c1"># X-axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Y-axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="s1">&#39;#4e4e4e&#39;</span><span class="p">)</span>
+
+<span class="c1"># X-axis label</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="s2">&quot;F1-Score&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="c1"># Y-axis label</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span><span class="s1">&#39;Annotation&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Legend</span>
+<span class="n">patches</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation Set&#39;</span><span class="p">),</span>
+    <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Random&#39;</span><span class="p">),</span>    
+          <span class="p">]</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">patches</span><span class="p">,</span> 
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;F1 Score&#39;</span><span class="p">,</span>
+          <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+          <span class="n">ncol</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">labelspacing</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">handlelength</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+          <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+          <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;x-large&#39;</span><span class="p">,</span>
+         <span class="p">)</span>
+
+<span class="c1"># Figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Model-Bootstrap_21_0.png" src="../../_images/Model-Bootstrap_21_0.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/advanced"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Model-MultipleAnnotations.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Model - Multiple Annotations</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../interpretability/README.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Interpretability</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Aditya Karan Chhabra<br/>
+  
+      &copy; Copyright 2023, World Bank Group.<br/>
+    Last updated on Apr 01, 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
